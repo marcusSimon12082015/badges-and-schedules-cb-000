@@ -17,7 +17,7 @@ end
 
 def printer(array)
   new_array = []
-  new_array.push(batch_badge_creator(array))
-  new_array.push(assign_rooms(array))
+  new_array.concat(batch_badge_creator(array))
+  new_array.concat(assign_rooms(array))
   new_array.each{|x| puts x}
-end  
+end

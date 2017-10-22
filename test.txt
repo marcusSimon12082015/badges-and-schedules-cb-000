@@ -9,3 +9,26 @@ conference_badges
     should return a list of welcome messages and room assignments
     should not hard-code the response
   #printer
+    should puts the list of badges and room_assignments (FAILED - 1)
+
+Failures:
+
+  1) conference_badges #printer should puts the list of badges and room_assignments
+     Failure/Error: printer(attendees)
+
+       #<IO:<STDOUT>> received :puts with unexpected arguments
+         expected: ("Hello, my name is Edsger.")
+              got: (["Hello, my name is Edsger.", "Hello, my name is Ada.", "Hello, my name is Charles.", "Hello, my name is Alan.", "Hello, my name is Grace.", "Hello, my name is Linus.", "Hello, my name is Matz."])
+     # ./conference_badges.rb:22:in `puts'
+     # ./conference_badges.rb:22:in `block in printer'
+     # ./conference_badges.rb:22:in `each'
+     # ./conference_badges.rb:22:in `printer'
+     # ./spec/conference_badges_spec.rb:105:in `block (3 levels) in <top (required)>'
+
+Finished in 0.06068 seconds (files took 0.27291 seconds to load)
+6 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/conference_badges_spec.rb:97 # conference_badges #printer should puts the list of badges and room_assignments
+
