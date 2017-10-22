@@ -9,23 +9,3 @@ conference_badges
     should return a list of welcome messages and room assignments
     should not hard-code the response
   #printer
-    should puts the list of badges and room_assignments (FAILED - 1)
-
-Failures:
-
-  1) conference_badges #printer should puts the list of badges and room_assignments
-     Failure/Error: printer(attendees)
-
-     NoMethodError:
-       undefined method `printer' for #<RSpec::ExampleGroups::ConferenceBadges::Printer:0x0000000155d3f8>
-       Did you mean?  print
-                      printf
-     # ./spec/conference_badges_spec.rb:105:in `block (3 levels) in <top (required)>'
-
-Finished in 0.02304 seconds (files took 0.23042 seconds to load)
-6 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/conference_badges_spec.rb:97 # conference_badges #printer should puts the list of badges and room_assignments
-
