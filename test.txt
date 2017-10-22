@@ -1,0 +1,28 @@
+
+conference_badges
+  #badge_maker
+    should return a formatted badge
+  #batch_badge_creator
+    should return a list of badge messages
+    should not hard-code response
+  #assign_rooms
+    should return a list of welcome messages and room assignments (FAILED - 1)
+
+Failures:
+
+  1) conference_badges #assign_rooms should return a list of welcome messages and room assignments
+     Failure/Error: expect(assign_rooms(attendees)).to eq(room_assignments)
+
+       expected: ["Hello, Edsger! You'll be assigned to room 1!", "Hello, Ada! You'll be assigned to room 2!", "Hello,...om 5!", "Hello, Linus! You'll be assigned to room 6!", "Hello, Matz! You'll be assigned to room 7!"]
+            got: ["Hello Edsger! You'll be assigned to room 1", "Hello Ada! You'll be assigned to room 2", "Hello Char...to room 5", "Hello Linus! You'll be assigned to room 6", "Hello Matz! You'll be assigned to room 7"]
+
+       (compared using ==)
+     # ./spec/conference_badges_spec.rb:82:in `block (3 levels) in <top (required)>'
+
+Finished in 0.0223 seconds (files took 0.21145 seconds to load)
+4 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/conference_badges_spec.rb:81 # conference_badges #assign_rooms should return a list of welcome messages and room assignments
+
